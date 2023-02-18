@@ -4,9 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simplist Bank</title>
+    <!-- gg font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Phudu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tw css -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              openSans: ["Open Sans", " sans-serif"],
+              phudu: ["Phudu", "cursive"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
-    <h1 class="text-6xl font-bold uppercase text-center mt-5">Simplist bank</h1>
+    <header>
+      <h1 class="text-6xl font-semibold text-center mt-5 font-phudu">
+        <span class="text-cyan-600">Simplist</span> bank
+      </h1>
+    </header>
+
+    <main class="mt-20">
+      <section
+        class="bg-cyan-200 max-w-7xl mx-auto rounded-lg p-8 text-center font-phudu normal-case"
+      >
+        <h2 class="text-4xl mb-10 font-phudu">Please Login</h2>
+        <div class="flex flex-col gap-4 items-center font-openSans">
+          <input type="email" placeholder="Your Email" class="w-1/2 p-2" />
+          <input
+            type="password"
+            placeholder="Password
+          
+          "
+            class="w-1/2 p-2"
+          />
+          <button
+            id="btn-submit"
+            class="bg-cyan-600 text-white font-medium px-5 p-2 rounded-md hover:bg-cyan-700"
+          >
+            Submit
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="./js/script.js"></script>
   </body>
 </html>
