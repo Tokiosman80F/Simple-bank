@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balance</title>
+    <!-- gg font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Phudu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tw css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              openSans: ["Open Sans", " sans-serif"],
+              phudu: ["Phudu", "cursive"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-6xl font-semibold text-center mt-5 font-phudu">
+        Bal<span class="text-cyan-600">ance</span>
+      </h1>
+    </header>
+    <main class="w-full max-w-7xl mx-auto mt-20">
+      <section>
+        <div class="grid grid-cols-3 gap-4 text-white">
+          <!-- deposit -->
+          <div
+            class="bg-green-500 text-center font-light px-5 py-10 w-9/12 rounded-lg"
+          >
+            <h1 class="uppercase text-2xl font-bold font-phudu">Deposite</h1>
+            <h3 class="text-5xl font-openSans">$00</h3>
+          </div>
+          <!-- withdrawl -->
+          <div
+            class="bg-violet-500 text-center font-light px-5 py-10 w-9/12 rounded-lg"
+          >
+            <h1 class="uppercase text-2xl font-bold font-phudu">withdrawl</h1>
+            <h3 class="text-5xl font-openSans">$00</h3>
+          </div>
+          <!-- balance -->
+          <div
+            class="bg-red-500 text-center font-light px-5 py-10 w-9/12 rounded-lg"
+          >
+            <h1 class="uppercase text-2xl font-bold font-phudu">balance</h1>
+            <h3 class="text-5xl font-openSans">$00</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cash in and out -->
+      <section class="mt-20">
+        <div class="grid grid-cols-2 gap-4 text-white">
+          <!-- deposit -->
+          <div class="bg-yellow-500 font-light px-5 py-12 rounded-lg">
+            <h1 class="uppercase text-2xl font-bold font-phudu">Deposite</h1>
+            <!-- input feild -->
+            <div class="flex flex-col gap-4 items-start font-openSans mt-5">
+              <input
+                type="number"
+                id="user-deposite"
+                placeholder="$$ Your Deposite Amount"
+                class="w-9/12 p-2"
+              />
+
+              <button
+                id="btn-deposite"
+                class="bg-cyan-600 text-white font-medium px-5 p-2 rounded-md hover:bg-cyan-700"
+              >
+                Deposite
+              </button>
+            </div>
+          </div>
+
+          <!-- deposit -->
+          <div class="bg-orange-500 font-light px-5 py-12 rounded-lg">
+            <h1 class="uppercase text-2xl font-bold font-phudu">Withdrawl</h1>
+            <!-- input feild -->
+            <div class="flex flex-col gap-4 items-start font-openSans mt-5">
+              <input
+                type="number"
+                id="user-withdrawl"
+                placeholder="$$ Your Withdrawl Amount"
+                class="w-9/12 p-2"
+              />
+
+              <button
+                id="btn-withdrawl"
+                class="bg-cyan-600 text-white font-medium px-5 p-2 rounded-md hover:bg-cyan-700"
+              >
+                Withdrawl
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
